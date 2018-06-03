@@ -2,7 +2,7 @@ window.addEventListener('load',function(){
 	if(localStorage.getItem('billet')!=null){
 	var bill =localStorage.getItem('billet')
 	bill=JSON.parse(bill)
-
+	$('#articles').append(bill.article)
 }});
 var lab;
 function inscription(){
@@ -36,11 +36,6 @@ function inscription(){
 			}
 		}
 	}
-
-function recuperer(){
-	var stocked=localStorage.getItem('Simon')
-	console.log(JSON.parse(stocked))
-}
 $('.disp').keyup(function(){
 	var x = $('#'+$(this).attr('data'))
 	x.css('display','inline');
@@ -49,3 +44,7 @@ $('.disp').keyup(function(){
 		x.css('display','none')
 	}
 })
+function art(){
+	var arti={"article":$('#article').val(),"auteur":$('#login').val()}
+	localStorage.setItem("billet",JSON.stringify(arti))
+}

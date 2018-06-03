@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="#" id="res">
+		<input id="firstname" type="text" required placeholder="Nom" autocomplete="on"><br />
+		<input id="lastname" type="text" required placeholder="Prénom" autocomplete="on"><br />
+		<input id="pseudo" type="text" required placeholder="Pseudo" autocomplete="on"><br />
+		<input type="password" id="pass" required placeholder="Mot de passe" class="disp" data="necessaire" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{8,}$"><p class="dis" id="necessaire">Votre mot de passe doit contenir au moins huit caractères dont au moins une majuscule, un caractère spécial et un chiffre !</p> <br />
+		<input type="radio" id="homme" required name="sexe">
+		<label for="homme">Homme</label>
+		<input type="radio" id="femme" name="sexe">
+		<label for="femme">Femme</label><br />
+		<input type="date" id='date' required placeholder="AAAA/MM/DD" class='disp' data="born"><br />
+		<input id="city" type="text" required placeholder="Ville" autocomplete="on"><br />
+		<input id="email" type="email" required placeholder="E-mail" autocomplete="on"><br />
+		<input id="site" type="text" placeholder="URL de votre site" autocomplete="on"><br /><!-- Obliger l'utlisateur a avoir un site ? -->
+		<textarea id='hobbies' type="textarea" required maxlength="200" placeholder="Vos hobbies"></textarea><br />
+		<input type="text" id="tel" required placeholder="XX.XX.XX.XX.XX" pattern="[0-9]+" class="disp" data="phone"><p class="dis" id="phone">Ne doit contenir que des chiffres</p><br />
+		<p>Couleur préférée<input id="color" type="color" placeholder="Couleur préférée"></p><br />
+		<input type="submit" value="Valider" onclick="stocker()">
+		<button onclick='recuperer()'>Test</button>
+	</form>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="scriptco.js"></script>
+</body>
+</html>
+<!-- Créez un formulaire d'inscription. Dans celui-ci l'utilisateur est invité à saisir : nom, prénom, login (ne doit pas déjà être utilisé), sexe (bouton radio), mot de passe (au moins huit caractères dont au moins une majuscule, un caractère spécial et un chiffre), date de naissance, ville, mail (valide), url de son site (valide), ses hobbys (max 200 caractères), son numéro de téléphone (XX.XX.XX.XX.XX) ainsi que sa couleur préférée. -->

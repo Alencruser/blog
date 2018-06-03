@@ -1,6 +1,9 @@
-/*window.addEventListener('load',function(){
+window.addEventListener('load',function(){
 	document.getElementById('res').reset();
-});*/
+	if(localStorage.getItem('billet')!=null){
+	var bill =localStorage.getItem('billet')
+	bill=JSON.parse(bill)
+}});
 var lab;
 function inscription(){
 		if($(':input')[5].checked){

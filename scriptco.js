@@ -22,6 +22,11 @@ function inscription(){
 		} else {
 			if (localStorage.getItem(JSON.parse($('#login').val()).password)== $('#cpass').val()){
 				alert('Vous êtes connecté')
+				function redirect(){
+					document.location.href="connected.html"
+				}
+			}else {
+				alert('Mauvais mot de passe !')
 			}
 		}
 	}

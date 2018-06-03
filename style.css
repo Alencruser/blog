@@ -1,0 +1,17 @@
+h1 {
+	text-align:center;
+	background-color: #919191FF;
+	margin-top:-10px;
+}
+#connec {
+	margin-top:-22px;
+	background-color:#939393FF;
+}
+#inscript {
+	margin-top:-22px;
+	background-color: #939393FF;
+}
+#inscript button {
+	margin-top:-5px;
+	padding-bottom: 5px
+}

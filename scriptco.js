@@ -1,8 +1,8 @@
 window.addEventListener('load',function(){
-	document.getElementById('res').reset();
 	if(localStorage.getItem('billet')!=null){
 	var bill =localStorage.getItem('billet')
 	bill=JSON.parse(bill)
+
 }});
 var lab;
 function inscription(){
@@ -20,14 +20,17 @@ function inscription(){
 		alert('Formulaire incomplet/Des formats n\'ont pas été respectés ou le pseudo est déjà utilisé')
 	}}
 	function connexion(){
+		var co=localStorage.getItem($('#login').val())
+		co=JSON.parse(co)
 		if (localStorage.getItem($('#login').val())==null){
 			alert('Nous ne connaissons pas de '+$('#login').val()+" !")
 		} else {
-			if (localStorage.getItem(JSON.parse($('#login').val()).password)== $('#cpass').val()){
+			if (co.password == $('#cpass').val()){
 				alert('Vous êtes connecté')
 				function redirect(){
 					document.location.href="connected.html"
 				}
+				redirect()
 			}else {
 				alert('Mauvais mot de passe !')
 			}
